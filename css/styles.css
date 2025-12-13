@@ -1,0 +1,190 @@
+/* === USTAWIENIA OGÓLNE === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  background-color: #000000;
+  color: #e6e8ef;
+}
+
+/* === HEADER Z LOGO I LINKAMI === */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 12px 16px;
+}
+.planet-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 100px;
+  font-family: 'Space Mono', monospace;
+}
+
+.planet-text h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: 'Space Mono', monospace;
+  margin-top: 12px;
+}
+
+/* Lewa i prawa nawigacja */
+.nav-left {
+  display: flex;
+  gap: 200px;
+  padding-left: 100px; /* odsunięcie od lewej krawędzi */
+}
+
+.nav-right {
+  display: flex;
+  gap: 200px;
+  padding-right: 100px; /* odsunięcie od prawej krawędzi */
+}
+
+/* Logo na środku */
+.logo-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styl logo */
+.logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 1.0s ease;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+}
+.planet-img img:hover {
+  transform: scale(1.1);
+}
+
+/* === LINKI NAWIGACYJNE === */
+.main-header a { 
+  background: transparent;
+  border: none;
+  color: #ff6060;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-header a:hover {
+  color: #ffffff;
+}
+
+/* === TREŚĆ STRONY === */
+main {
+  padding: 20px;
+}
+
+main h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+main p, main ul, main form {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === STOPKA === */
+footer {
+  text-align: center;
+  padding: 12px;
+  background-color: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+}
+
+/* === FORMULARZE === */
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 400px;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #2a324a;
+  border-radius: 6px;
+  background-color: #0e1326;
+  color: #e6e8ef;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 400px;
+  padding: 32px 16px;
+}
+
+/* Każda sekcja z planetą */
+.planet-row {
+  display: flex;
+  justify-content: flex-end; /* obrazek po prawej */
+}
+
+/* Styl obrazka */
+.planet-img img {
+    max-width: 500px;
+    height: auto;
+    margin-right: 15px;
+    transition: transform 2.0s ease;
+}
+/* === ANIMACJE === */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+.twinkle-anim {
+  animation: twinkle 2.5s ease-in-out infinite;
+}
+
+/* === RESPONSYWNOŚĆ === */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-left, .nav-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+}

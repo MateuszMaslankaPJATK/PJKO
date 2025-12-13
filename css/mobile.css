@@ -1,0 +1,122 @@
+/* ===================================================== */
+/* ===================== MOBILE ======================== */
+/* ===================================================== */
+@media (max-width: 768px) {
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #000;
+  }
+
+  /* ================= HEADER ================= */
+
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 12px 24px;
+  }
+
+  /* KOLEJNOŚĆ ELEMENTÓW */
+  .logo-center {
+    order: 1;
+    margin-bottom: 28px;
+  }
+
+  .nav-left {
+    order: 2;
+  }
+
+  .nav-right {
+    order: 3;
+  }
+
+  /* NAWIGACJE */
+  .nav-left,
+  .nav-right {
+    padding: 0;
+    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* LINKI */
+  .main-header a {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #ff6060;
+    text-align: center;
+  }
+
+  /* LOGO */
+  .logo {
+    height: 64px;
+    width: auto;
+    transform: none !important;
+  }
+
+  /* WYŁĄCZ HOVER / SCALE */
+  .logo:hover,
+  .planet-img img:hover {
+    transform: none !important;
+  }
+
+  /* ================= MAIN ================= */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    padding: 24px 12px;
+  }
+
+  /* PLANETY */
+  .planet-row {
+    justify-content: center;
+  }
+
+  .planet-img img {
+    max-width: 92vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* ================= TEKST ================= */
+
+  main h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  main p,
+  main ul {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  /* ================= FORMULARZE ================= */
+
+  form {
+    max-width: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  /* ================= FOOTER ================= */
+
+  footer {
+    font-size: 0.75rem;
+    padding: 16px 8px;
+    text-align: center;
+  }
+}
